@@ -3,8 +3,8 @@
 
 Open hardware design and firmware for the low-cost IoT stations behind the
 **QMUL Air Quality Monitoring System (AQMS)**: a seven-node network deployed
-for roughly fifteen months (April 2025 to July 2026) at Queen Mary University
-of London (Mile End campus) and King Edward Memorial Park, London, alongside
+for fourteen months (April 2025 to June 2026) at Queen Mary University of
+London (Mile End campus) and King Edward Memorial Park, London, alongside
 two Tower Hamlets reference stations.
 
 The measurements collected by this network are published as a companion
@@ -46,6 +46,10 @@ on the I2C bus:
 
 Full wiring and the I2C address map are in
 [hardware/WIRING.md](hardware/WIRING.md).
+
+## Architecture
+
+![Network architecture](docs/network_architecture.svg)
 
 ## Firmware, at a glance
 
