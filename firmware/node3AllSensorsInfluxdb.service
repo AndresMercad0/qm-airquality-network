@@ -1,0 +1,28 @@
+[Unit]
+Description=Air Quality Monitoring System - Node 3 (v8 - Debian 13 trixie)
+After=multi-user.target
+
+[Service]
+Type=notify
+NotifyAccess=main
+User=root
+ExecStart=/usr/bin/python3 /home/<YOUR_PI_USERNAME>/Node3Code/node3AllSensorsInfluxdb.py
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/etc/aqms.env
+
+# Always restart if the script fails or exits
+Restart=always
+RestartSec=60
+
+# Infinite attempts (systemd never gives up)
+StartLimitInterval=0
+
+# Generous start-up timeout (sensors can take time)
+TimeoutStartSec=120
+
+# Watchdog: if no signal is received within 1 hour, restart the service.
+# The script sends WATCHDOG=1 every 30 seconds.
+WatchdogSec=3600
+
+[Install]
+WantedBy=multi-user.target
