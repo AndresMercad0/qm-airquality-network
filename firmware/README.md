@@ -40,4 +40,4 @@ AQMS_INFLUX_BUCKET=<YOUR_INFLUXDB_BUCKET>
 Every node runs this same code. Two things change per node: the `TAGS` block
 at the top of `node3AllSensorsInfluxdb.py` (node id, site, coordinates,
 exposure) and the sensor subset - nodes without the Alphasense mid-cost cells
-simply leave those channels empty.
+simply do not record those signals.
