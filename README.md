@@ -38,9 +38,9 @@ Each station is a **Raspberry Pi Zero 2 W**, mains-powered, with all sensors
 on the I2C bus:
 
 - **Low-cost tier (every node):** Sensirion SHT45 (temperature, humidity),
-  Sensirion SGP40 (VOC index), Sensirion SPS30 (PM2.5, PM10), Grove
-  Multichannel Gas v2 (NO2, CO), and an MQ131 ozone sensor read through an
-  ADS1115 ADC.
+  Sensirion SGP40 (VOC index), Sensirion SPS30 (PM2.5, PM10), Winsen GM-702B
+  (CO) and GM-102B (NO2) on the Seeed Grove Multichannel Gas v2 board, and a
+  Winsen MQ131 ozone sensor read through a Texas Instruments ADS1115 ADC.
 - **Mid-cost tier (nodes 3 and 5):** Alphasense NO2-B43F, OX-B431 (ozone) and
   CO-B4 electrochemical cells on ISB boards, each read through an ADS1115.
 
